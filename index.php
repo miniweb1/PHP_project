@@ -3,12 +3,17 @@ function clockHandAngle($time) {
     $time = explode(':', $time);
     $hours = $time[0];
     $minutes = $time[1];
-    $degree = 0.5 * (60 * $hours - 11 * $minutes);
-    $degree = abs($degree);
-    if($degree > 180) {
-        return 360 - $degree;
+    $angle = 0.5 * (60 * $hours - 11 * $minutes);
+    $angle = abs($degree);
+    if($angle > 180) {
+        return 360 - $angle;
     }
-    return $degree;
+    return $angle;
 }
 
-echo clockHandAngle('10:16:00');
+function clockHandAngle2($angle, $timeNow) {
+    $timeNow = explode(':', $timeNow);
+    $hours = $timeNow[0];
+    $minutes = $timeNow[1];
+
+}
