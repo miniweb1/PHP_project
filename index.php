@@ -5,10 +5,7 @@ function clockHandAngle($time) {
     $minutes = $time[1];
     $angle = 0.5 * (60 * $hours - 11 * $minutes);
     $angle = abs($degree);
-    if($angle > 180) {
-        return 360 - $angle;
-    }
-    return $angle;
+    return min($angle, 360 - $angle);
 }
 
 function clockHandAngle2($angle, $timeNow) {
