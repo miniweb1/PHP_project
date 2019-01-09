@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-    <?= clockHandAngle('11:00:01'); ?>
+    <div id="container">
+        <a href="clockHandAngle.php">1</a>
+        <a href="clockHandAngle2.php">2</a>
+    </div>
+    
 </body>
 </html>
