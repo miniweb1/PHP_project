@@ -12,6 +12,12 @@
 </head>
 <body>
     <div id="container">
+        <!-- Header -->
+        <?php include './includes/header.php'; ?>
+
+        <!-- Nav -->
+        <?php include './includes/nav.php'; ?>
+        
         <form action="clockHandAngle.php" method="GET">
             <fieldset>
                 <label>Въведете час:</label>
@@ -43,6 +49,9 @@
                
             } 
         ?>
+
+         <!-- Footer -->
+         <?php include './includes/footer.php'; ?>
     </div>
     
 </body>

@@ -1,21 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Calibri, sans-serif;
 }
 
 #container {
     width: 1000px;
     margin: 0 auto;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 20px 50px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid darkgreen;
 }
 
 fieldset {
     border: none;
 }
 
+nav {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #2d4708;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+}
+
+nav ul a {
+    display: block;
+    width: auto;
+    margin-right: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #b4af5b;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+nav ul li {
+    float: left;
+}
+
 .btn {
     border: 0;
     padding: 15px 20px;
     color: #ffffff;
-    background-color: blue;
+    background-color: #2d4708;
+    color: #b4af5b;
     border-radius: 10px;
     cursor: pointer;
 }

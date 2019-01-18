@@ -12,8 +12,14 @@
 </head>
 <body>
     <div id="container">
-        <a href="clockHandAngle.php">1</a>
-        <a href="clockHandAngle2.php">2</a>
+        <!-- Header -->
+        <?php include './includes/header.php'; ?>
+
+        <!-- Nav -->
+        <?php include './includes/nav.php'; ?>
+        
+        <!-- Footer -->
+        <?php include './includes/footer.php'; ?>
     </div>
     
 </body>

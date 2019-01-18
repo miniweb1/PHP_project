@@ -2,20 +2,20 @@
 function validateTime($hours, $minutes, $seconds, $angle = null) {
 
     if(!ctype_digit($hours) || !ctype_digit($minutes) || !ctype_digit($seconds)) {
-        return 'Невалиден формат! Стойността не може да бъде текст!';
+        return 'Невалиден формат!';
     }
     if($hours > 24) {
-        return 'Невалиден формат на часа.';
+        return 'Невалиден формат на часа!';
     }
     if($minutes > 60) {
-        return 'Невалиден формат на минутите.';
+        return 'Невалиден формат на минутите!';
     }
     if($seconds > 60) {
-        return 'Невалиден формат на секундите.';
+        return 'Невалиден формат на секундите!';
     }
 
     if($angle > 360) {
-        return 'Въведете ъгъл между 0 и 360 градуса.';
+        return 'Въведете ъгъл между 0 и 360 градуса!';
     }
     
     return true;
@@ -35,8 +35,9 @@ function clockHandAngle($time) {
     // Formula for finding angle
     $angle = abs(30 * $hours + 0.5 * $minutes + ($seconds / 120) - (6 * $minutes + 0.1 * $seconds));
     // Return the smaller angle
-    return min($angle, abs(360 - $angle));
+    return min($angle, 360 - $angle);
 }
+
 
 function clockHandAngle2($angle, $timeNow) {
     // Get the hours, minutes and seconds from the string
