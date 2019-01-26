@@ -47,7 +47,7 @@ function clockHandAngle2($angle, $timeNow) {
     $seconds = $timeNow[2];
 
     $e = 0.09;
-    while (clockHandAngle($hours . ':' . $minutes . ':' . $seconds) - $angle > $e) {
+    while (abs(clockHandAngle($hours . ':' . $minutes . ':' . $seconds) - $angle) > $e) {
         $seconds += 1;
         if($seconds >= 60) {
             $seconds = 0;
@@ -65,5 +65,5 @@ function clockHandAngle2($angle, $timeNow) {
     // Format the time
     $time = strtotime($hours . ':' . $minutes . ':' . $seconds);
 
-    return date('H:i:s', $time);
+    return date('g:i:s', $time);
 }
